@@ -22,12 +22,12 @@ public class ChangesApplierTest {
     public void Given_ValidChangeFile_When_ApplyChanges_Then_MakeCorrectChanges() throws Exception
     {
         InputFileReader inputReader = new InputFileReader();
-        File testFile = new File("src\\test\\testData\\input1.json");
+        File testFile = new File("src/test/testData/input1.json");
         InputCollection inputCollection = inputReader.parseInput(testFile.getAbsolutePath());
         Repository repository = new Repository(inputCollection);
         
         ChangesFileReader changesReader = new ChangesFileReader();
-        File changeFile = new File("src\\test\\testData\\changes1.json");
+        File changeFile = new File("src/test/testData/changes1.json");
         List<ChangeData> changes = changesReader.parseChangeFile(changeFile.getAbsolutePath());
         
         ChangesApplier applier = new ChangesApplier();
@@ -53,12 +53,12 @@ public class ChangesApplierTest {
     public void Given_BrokenChangeFile_When_ApplyChanges_Then_SkipChangesWithMissingField() throws Exception
     {
         InputFileReader inputReader = new InputFileReader();
-        File testFile = new File("src\\test\\testData\\input1.json");
+        File testFile = new File("src/test/testData/input1.json");
         InputCollection inputCollection = inputReader.parseInput(testFile.getAbsolutePath());
         Repository repository = new Repository(inputCollection);
         
         ChangesFileReader changesReader = new ChangesFileReader();
-        File changeFile = new File("src\\test\\testData\\brokenChanges1.json");
+        File changeFile = new File("src/test/testData/brokenChanges1.json");
         List<ChangeData> changes = changesReader.parseChangeFile(changeFile.getAbsolutePath());
         
         ChangesApplier applier = new ChangesApplier();

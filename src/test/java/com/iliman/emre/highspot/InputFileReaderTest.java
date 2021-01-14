@@ -24,7 +24,7 @@ public class InputFileReaderTest {
     public void Given_ValidInputFile_When_ReadInputFile_Then_CreateCorrectInputCollection() throws Exception
     {
         InputFileReader reader = new InputFileReader();
-        File testFile = new File("src\\test\\testData\\input1.json");
+        File testFile = new File("src/test/testData/input1.json");
         InputCollection inputCollection = reader.parseInput(testFile.getAbsolutePath());
         assertTrue(inputCollection.getPlaylists().size() == 3);
         assertTrue(inputCollection.getSongs().size() == 40);
@@ -44,7 +44,7 @@ public class InputFileReaderTest {
         expectedEx.expectMessage("Problem opening input file");
         
         InputFileReader reader = new InputFileReader();
-        File testFile = new File("src\\test\\testData\\x.json");
+        File testFile = new File("src/test/testData/x.json");
         reader.parseInput(testFile.getAbsolutePath());
     }
     
@@ -55,7 +55,7 @@ public class InputFileReaderTest {
         expectedEx.expectMessage("Problem parsing JSON in input file");
         
         InputFileReader reader = new InputFileReader();
-        File testFile = new File("src\\test\\testData\\brokenInput1.json");
+        File testFile = new File("src/test/testData/brokenInput1.json");
         reader.parseInput(testFile.getAbsolutePath());
     }
     

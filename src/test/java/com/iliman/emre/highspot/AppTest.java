@@ -24,8 +24,8 @@ public class AppTest
         file.deleteOnExit();
         String outputPath = file.getAbsolutePath();
         
-        String[] args = new String[] {"app","-input","src\\test\\testData\\input1.json",
-                "-change","src\\test\\testData\\changes1.json",
+        String[] args = new String[] {"app","-input","src/test/testData/input1.json",
+                "-change","src/test/testData/changes1.json",
                 "-output",outputPath};
          
         

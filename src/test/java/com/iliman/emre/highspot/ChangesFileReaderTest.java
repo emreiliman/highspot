@@ -20,7 +20,7 @@ public class ChangesFileReaderTest {
     public void Given_ValidChangesFile_When_ReadChangesFile_Then_CreateCorrectChangesData() throws Exception
     {
         ChangesFileReader reader = new ChangesFileReader();
-        File changeFile = new File("src\\test\\testData\\changes1.json");
+        File changeFile = new File("src/test/testData/changes1.json");
         List<ChangeData> changes = reader.parseChangeFile(changeFile.getAbsolutePath());
         assertTrue(changes.size() == 3);
         AddPlaylistData addPlaylist = (AddPlaylistData)(changes.get(0));
@@ -37,7 +37,7 @@ public class ChangesFileReaderTest {
     public void Given_BrokenChangesFile_When_ReadChangesFile_Then_CreateCorrectChangesData() throws Exception
     {
         ChangesFileReader reader = new ChangesFileReader();
-        File changeFile = new File("src\\test\\testData\\brokenChanges1.json");
+        File changeFile = new File("src/test/testData/brokenChanges1.json");
         List<ChangeData> changes = reader.parseChangeFile(changeFile.getAbsolutePath());
         assertTrue(changes.size() == 3);
         AddPlaylistData addPlaylist = (AddPlaylistData)(changes.get(0));

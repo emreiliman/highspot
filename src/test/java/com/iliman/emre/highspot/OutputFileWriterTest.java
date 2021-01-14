@@ -20,7 +20,7 @@ public class OutputFileWriterTest {
     public void Given_ValidOutputPath_When_WriteOutput_Then_WriteToOutputFile() throws Exception
     {
         InputFileReader reader = new InputFileReader();
-        File testFile = new File("src\\test\\testData\\input1.json");
+        File testFile = new File("src/test/testData/input1.json");
         InputCollection inputCollection = reader.parseInput(testFile.getAbsolutePath());
         Repository repository = new Repository(inputCollection);
         
